@@ -1,0 +1,68 @@
+% For draft versions of the paper, use single column.
+\documentclass[onecolumn]{article}
+% For final versions of the paper, use double column.
+%\documentclass[twocolumn]{article}
+
+%
+% Some favorite packages
+%
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{setspace}
+
+% Scott's macros package.
+\usepackage{mymacros}
+
+% Put any paper-specific macros in macros.tex.
+\input{macros}
+
+% For draft versions of the paper, use double spacing.
+% For final versions, comment out this line to make single spacing.
+\doublespacing
+
+% For draft versions of the paper, use Scott's macros (set to true).
+% For final versions, turn off Scott's macros (set to false).
+\setboolean{macrosOn}{true}
+
+\begin{document}
+\begin{sloppypar}
+\widowpenalty 10000
+
+\title{Awesome Title Goes Here!}
+
+
+\author{A Masters Project Report\\
+by\\
+YOUR NAME HERE}
+
+% Fill in defense date here.
+\date{}
+
+\maketitle
+
+%
+% Input each section from a separate LaTeX file...
+%
+
+\InputSection{sec-abstract}
+
+\InputSection{sec-intro}
+
+\InputSection{sec-background}
+
+% More sections go here...
+
+\InputSection{sec-discussion}
+
+\InputSection{sec-conclusion}
+
+%
+% And here's the bibliography...
+%
+
+\bibliographystyle{abbrv}
+\bibliography{refs}
+
+\end{sloppypar}
+\end{document}

@@ -1,0 +1,48 @@
+%
+% Examples of how to do figures and tables.
+%
+
+
+%
+% Normal figure.
+%
+\begin{figure}[t!]
+\centering
+\includegraphics[scale=1.0]{graphics/fig-xxxxx.pdf}
+\caption{Figure caption goes here.}
+\label{fig-xxxxx}
+\end{figure}
+
+
+%
+% Normal table.
+%
+\begin{table}[t!]
+\centering
+\caption{Table caption goes here.}
+\label{tab-xxxxx}
+% Use a graphic or a LaTeX table, like this:
+\begin{tabular}{|l|l|l|} \hline
+\multicolumn{3}{|c|}{\textbf{Tests}} \\ \hline
+\textbf{Category}&\textbf{Code level}&\textbf{Code elements}\\ \hline
+\multirow{3}{*}{Open} & Methods (same file) & 1,2,4,8 \\
+& Methods (different files) &  \\
+& Files &  \\ \hline
+\multirow{3}{*}{Juxtapose} & Methods (same file) & 2,4,6 \\ 
+& Methods (different files) &  \\ 
+& Files &  \\ \hline
+\multirow{2}{*}{Navigate} & Same File & 2(3),4(3),8(3) \\
+& Different Files &  \\ \hline
+\end{tabular}
+\end{table}
+
+
+%
+% Two-column table.
+%
+\begin{figure*}
+\centering
+\includegraphics[scale=1.0]{graphics/fig-xxxxx.pdf}
+\caption{Figure caption goes here.}
+\label{fig-xxxxx}
+\end{figure*}

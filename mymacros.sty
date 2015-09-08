@@ -1,0 +1,33 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{mymacros}[2014/11/14 My Macros Package]
+
+\RequirePackage{datetime}
+
+\RequirePackage{ifthen}
+
+
+\provideboolean{macrosOn}
+\setboolean{macrosOn}{false}
+
+% Use to print date (generally on first page).
+\newcommand{\PrintDate}{\ifthenelse{\boolean{macrosOn}}{\mmddyyyydate{} {\small ** \today{} \currenttime{} **}\\}{}}
+
+% Denote the intent of a paragraph.
+\newcommand{\Intent}[1]{\ifthenelse{\boolean{macrosOn}}{{\small\bf**#1**}}{}}
+
+\newcommand{\InputSection}[1]{\ifthenelse{\boolean{macrosOn}}{\input{#1}\clearpage}{\input{#1}}}
+
+\newcommand{\Section}[2]{\ifthenelse{\boolean{macrosOn}}{\section{#1 **D#2}}{\section{#1}}}
+
+%
+% Callouts
+%
+
+\newcommand{\CalloutFigure}[1]{Fig.~\ref{#1}}
+\newcommand{\CalloutFigures}[2]{Figs.~\ref{#1} and~\ref{#2}}
+\newcommand{\CalloutSection}[1]{Section~\ref{#1}}
+\newcommand{\CalloutSectionsAThruZ}[2]{Sections~\ref{#1}--\ref{#2}}
+\newcommand{\CalloutTable}[1]{Table~\ref{#1}}
+
+
+\endinput

@@ -1,0 +1,64 @@
+%!TEX root = ./main.tex
+
+%
+% Add your paper-specific macros to this file
+%
+
+
+%
+% Participant quotes
+%
+%\topsep amount of extra vertical space at top of list
+%\partopsep extra length at top if environment is prececed by a blank line (it should be a rubber length)
+%\itemsep amount of extra vertical space between items
+%\parsep amount of vertical space between paragraphs within an item
+%\leftmargin horizontal distance between the left margins of the environment and the list; must be nonnegative
+%\rightmargin horizontal distance betwen the right margins of the enviroment and the list; must be nonnegative
+%\listparindent amount of extra space for paragraph indent after the first in an item; can be negative
+%\itemindent indentation of first line of an item; can be negative
+%\labelsep separation between end of the box containing the label and the text of the first line of an item
+%\labelwidth normal width of the box containing the label; if the actual label is bigger, the natural width is used, extending into the space for the first line of the item's text
+%\makelabel{label} generates the label printed by the \item command 
+
+%\newenvironment{ParticipantQuote}%
+%{\vspace{0pt}\noindent\begin{Sbox}\begin{minipage}{3.4in}\begin{small}\begin{list}{0}{\setlength{\leftmargin}{0.1in}\setlength{\itemindent}{-0.05in}\setlength{\labelsep}{0.25em}}}%
+%{\end{list}\end{small}\end{minipage}\end{Sbox}\fbox{\TheSbox}\vspace{0pt}}
+
+\newenvironment{ParticipantQuote}%
+{\begin{small}\begin{list}{0}{\setlength{\leftmargin}{0.2in}\setlength{\itemindent}{-0.05in}\setlength{\rightmargin}{0.2in}\setlength{\labelsep}{0.25em}}}%
+{\end{list}\end{small}}
+
+
+%
+% RQ list
+%
+\newenvironment{RQList}%
+{\begin{list}{0}{\setlength{\leftmargin}{0.2in}\setlength{\itemindent}{-0.1in}\setlength{\labelsep}{0.25em}\setlength{\itemsep}{3pt}}}%
+{\end{list}}
+
+\newenvironment{InnerRQList}%
+{\begin{list}{$\bullet$}{\setlength{\leftmargin}{0.05in}\setlength{\labelsep}{0.5em}}}%
+{\end{list}}
+
+
+%
+% Code listings
+%
+
+%\lstloadlanguages{[ANSI]C++}
+%
+%\lstdefinestyle{CppSrcCode}{%
+%  language=[ANSI]C++,
+%  basicstyle=\ttfamily,
+%  showstringspaces=false}
+%
+%\lstdefinestyle{CppSrcListing}{%
+%  style=CppSrcCode,
+%  basicstyle=\small\ttfamily}
+%
+%\lstdefinestyle{CppSrcNumberedListing}{%
+%  style=CppSrcListing,
+%  numbers=left,
+%  numberstyle=\footnotesize,
+%  stepnumber=1,
+%  numbersep=11pt}
